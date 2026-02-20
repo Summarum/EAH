@@ -23,7 +23,7 @@ namespace EAH
 
         private void NPVButtonClick(object sender, RoutedEventArgs e)
         {
-            NPVWindow npvWindow = new NPVWindow();
+            var npvWindow = new NPVWindow { Owner = this }; 
             npvWindow.Show();
         }
     }

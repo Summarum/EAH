@@ -13,9 +13,6 @@
                         ResizeBorderThickness="5" />
     </shell:WindowChrome.WindowChrome>
     <Grid>
-        <Button HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="74" Height="29">
-            <Button x:Name="NPVButton" Content="Button" Height="25" Width="65" RenderTransformOrigin="0.497,0.533" Click="NPVButtonClick"/>
-        </Button>
-
+        <Button x:Name="NPVButton" Content="NPV Calculator" Height="25" RenderTransformOrigin="0.497,0.533" Click="NPVButtonClick" Margin="10,10,701,415"/>
     </Grid>
 </Window>

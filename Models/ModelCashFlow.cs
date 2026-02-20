@@ -6,7 +6,7 @@ namespace EAH.Models
 {
     internal class ModelCashFlow
     {
-        public int period { get; set; }
-        public double amount { get; set; }
+        public int Period { get; set; }
+        public double Amount { get; set; }
     }
 }
