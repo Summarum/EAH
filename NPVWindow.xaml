@@ -13,6 +13,11 @@
                     ResizeBorderThickness="5" />
     </shell:WindowChrome.WindowChrome>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="167*"/>
+            <ColumnDefinition Width="633*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=20}" Margin="10,10,0,258"/>
+
     </Grid>
 </Window>

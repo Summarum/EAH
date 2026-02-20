@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EAH.Libs;
+using EAH.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -17,9 +19,13 @@ namespace EAH
     /// </summary>
     public partial class NPVWindow : Window
     {
+        private List<ModelCashFlow> cashFlowsList;
+        private LibNPVCalc npvCalc;
         public NPVWindow()
         {
             InitializeComponent();
+            cashFlowsList = new List<ModelCashFlow>();
+            npvCalc = new LibNPVCalc();
         }
     }
 }
