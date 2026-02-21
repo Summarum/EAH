@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using EAH.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,15 +18,19 @@ namespace EAH
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly IServiceProvider _services;
+        public MainWindow(MainWindowViewModel vm, IServiceProvider services)
         {
             InitializeComponent();
+            DataContext = vm;
+            _services = services;
         }
 
         private void NPVButtonClick(object sender, RoutedEventArgs e)
         {
-            var npvWindow = new NPVWindow { Owner = this }; 
-            npvWindow.Show();
+            var npv = _services.GetRequiredService<NPVWindow>();
+            npv.Owner = this;
+            npv.Show();
         }
     }
 }

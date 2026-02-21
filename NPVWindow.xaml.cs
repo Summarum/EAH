@@ -1,5 +1,6 @@
 ﻿using EAH.Libs;
 using EAH.Models;
+using EAH.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,7 +22,7 @@ namespace EAH
     {
         private List<ModelCashFlow> cashFlowsList;
         private LibNPVCalc npvCalc;
-        public NPVWindow()
+        public NPVWindow(NpvWindowViewModel vm)
         {
             InitializeComponent();
             cashFlowsList = new List<ModelCashFlow>();

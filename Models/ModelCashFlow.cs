@@ -4,7 +4,7 @@ using System.Text;
 
 namespace EAH.Models
 {
-    internal class ModelCashFlow
+    public class ModelCashFlow
     {
         public int Period { get; set; }
         public double Amount { get; set; }
